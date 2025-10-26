@@ -1,19 +1,18 @@
 const express = require('express');
 const webpush = require('web-push');
 const cors = require('cors');
-require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Configuration VAPID
-const vapidPublicKey = process.env.VAPID_PUBLIC_KEY;
-const vapidPrivateKey = process.env.VAPID_PRIVATE_KEY;
-const vapidEmail = process.env.VAPID_EMAIL || 'mailto:admin@sadtrans.com';
+// Configuration VAPID - Clés intégrées directement
+const vapidPublicKey = 'BLA3lu547ai4lGW0Fqae-74YdwPkhmtTCiGw85PICS43nuKkQVrpE8kvi_1aLJ6yAn9FxOftcUKb4HzUyOKbj-Y';
+const vapidPrivateKey = 'aVL5WpniNgdRuA1sM9THXOwAgXZpX7ivIBIGQdL_UOU';
+const vapidEmail = 'mailto:admin@sadtrans.com';
 
 if (!vapidPublicKey || !vapidPrivateKey) {
   console.error('❌ VAPID keys not configured!');
