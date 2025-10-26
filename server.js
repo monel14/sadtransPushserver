@@ -9,9 +9,9 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-// Configuration VAPID - Clés intégrées directement
-const vapidPublicKey = 'BLA3lu547ai4lGW0Fqae-74YdwPkhmtTCiGw85PICS43nuKkQVrpE8kvi_1aLJ6yAn9FxOftcUKb4HzUyOKbj-Y';
-const vapidPrivateKey = 'aVL5WpniNgdRuA1sM9THXOwAgXZpX7ivIBIGQdL_UOU';
+// Configuration VAPID - Clés intégrées directement (anciennes clés pour compatibilité)
+const vapidPublicKey = 'BE5qnTVWH5QXc70sZUqPOkeKURd6iSmy33qQ-lpmbRNwGACTnUIubTZ8CEPuGAjgIKNh0Fqq3lE1JxqJzR1pQWo';
+const vapidPrivateKey = 'YOUR_PRIVATE_KEY_HERE';
 const vapidEmail = 'mailto:admin@sadtrans.com';
 
 if (!vapidPublicKey || !vapidPrivateKey) {
